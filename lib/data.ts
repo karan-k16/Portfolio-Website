@@ -10,7 +10,6 @@ export const profile = {
     email:
       "https://mail.google.com/mail/?view=cm&fs=1&to=karankardam16@gmail.com",
   },
-  resumeUrl: "/resume.pdf",
 };
 
 export type Experience = {
@@ -102,7 +101,8 @@ export const projects: Project[] = [
     description:
       "Automated plant care with computer-vision height tracking at 95%+ accuracy and live sensor alerts",
     tech: ["Python", "Flask", "OpenCV", "React", "Arduino"],
-    liveUrl: "https://devpost.com",
+    githubUrl:
+      "https://github.com/karan-k16/MakeUofT-Smart-Plant-Monitoring-System",
     featured: true,
   },
   {
@@ -129,7 +129,7 @@ export const publications: Publication[] = [
     title:
       "Renewable Energy Integration in Northern Canada: A Machine Learning-Driven, Multi-Objective Evolutionary Framework.",
     venue: "Applied Energy · Second Author",
-    status: "Awaiting Publication",
+    status: "In Press",
     statusType: "review",
     description:
       "Bringing sustainable energy solutions to remote northern communities through machine-learning-driven multi-objective optimization.",

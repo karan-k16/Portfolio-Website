@@ -32,7 +32,7 @@ export default function CommandPalette() {
       { id: "education", label: "Education", icon: <span className="text-xs">›</span>, run: go("#education") },
       { id: "projects", label: "Projects", icon: <span className="text-xs">›</span>, run: go("#projects") },
       { id: "publications", label: "Publications", icon: <span className="text-xs">›</span>, run: go("#publications") },
-      { id: "resume", label: "Open résumé", hint: "PDF", icon: <DocIcon className="h-4 w-4" />, run: openUrl(profile.resumeUrl) },
+      { id: "resume", label: "Reach out for résumé", hint: "Email", icon: <DocIcon className="h-4 w-4" />, run: openUrl(profile.socials.email) },
       { id: "github", label: "GitHub", hint: "External", icon: <GithubIcon className="h-4 w-4" />, run: openUrl(profile.socials.github) },
       { id: "linkedin", label: "LinkedIn", hint: "External", icon: <LinkedinIcon className="h-4 w-4" />, run: openUrl(profile.socials.linkedin) },
       { id: "email", label: "Email me", hint: profile.email, icon: <MailIcon className="h-4 w-4" />, run: openUrl(profile.socials.email) },

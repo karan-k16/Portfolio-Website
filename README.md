@@ -8,7 +8,7 @@ Personal portfolio for **Karan Kardam** — a dark, minimalist site with a black
 - `⌘K` / `Ctrl+K` command palette for quick navigation
 - Scroll-triggered fade-in animations
 - Sections: Experience, Education, Projects, Publications, Skills
-- Résumé available at `/resume.pdf`
+- Résumé available on request via the ⌘K command palette
 
 ## Tech Stack
 
@@ -37,7 +37,6 @@ npm run start
 
 All content lives in [`lib/data.ts`](lib/data.ts) — profile, experience, education,
 projects, publications, and skills. Update that file to change what the site displays.
-Replace `public/resume.pdf` to update the downloadable résumé.
 
 ## Deployment
 
