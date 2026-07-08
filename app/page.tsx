@@ -2,7 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import CommandPalette from "@/components/CommandPalette";
-import { ExternalIcon, StarIcon } from "@/components/icons";
+import { ExternalIcon, StarIcon, GithubIcon } from "@/components/icons";
 import {
   profile,
   experiences,
@@ -157,6 +157,17 @@ export default function Home() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${p.name} on GitHub`}
+                          className="transition-colors hover:text-accent"
+                        >
+                          <GithubIcon className="h-3.5 w-3.5" />
+                        </a>
+                      )}
+                      {p.liveUrl && (
+                        <a
+                          href={p.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${p.name} — live`}
                           className="transition-colors hover:text-accent"
                         >
                           <ExternalIcon className="h-3.5 w-3.5" />

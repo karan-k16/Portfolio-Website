@@ -96,6 +96,26 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/karan-k16",
     featured: true,
   },
+  {
+    name: "Smart Plant Monitoring & Watering System",
+    description:
+      "Automated plant care with computer-vision height tracking at 95%+ accuracy and live sensor alerts",
+    tech: ["Python", "Flask", "OpenCV", "React", "Arduino"],
+    liveUrl: "https://devpost.com",
+    featured: true,
+  },
+  {
+    name: "Robotics for Space Exploration (RSX)",
+    description:
+      "Rover autonomy with ROS SMACH state machines and real-time path planning & obstacle avoidance",
+    tech: ["Python", "C++", "Bash", "ROS", "SMACH"],
+    githubUrl: "https://github.com/karan-k16",
+  },
+  {
+    name: "FIRST Robotics Competition",
+    description: "Competitive robotics — design, build, and control systems",
+    tech: ["Java", "Robotics"],
+  },
 ];
 
 export type Publication = {
