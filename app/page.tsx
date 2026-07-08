@@ -257,7 +257,7 @@ export default function Home() {
                       className={`rounded-full border px-2 py-0.5 text-[12px] ${
                         pub.statusType === "published"
                           ? "border-accent/40 text-accent"
-                          : "border-[var(--border)] text-muted-2"
+                          : "border-orange-400/40 text-orange-400"
                       }`}
                     >
                       {pub.status}
