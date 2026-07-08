@@ -28,7 +28,7 @@ export default function Nav() {
           : "border-b border-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#top"
           aria-label="Go to top"

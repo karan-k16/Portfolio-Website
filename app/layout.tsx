@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/lib/data";
+import InteractiveDots from "@/components/InteractiveDots";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <div className="accent-bar" aria-hidden="true" />
+        <InteractiveDots />
         {children}
       </body>
     </html>

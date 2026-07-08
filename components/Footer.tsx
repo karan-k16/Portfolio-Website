@@ -9,7 +9,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mx-auto max-w-3xl px-6 pb-16 pt-10">
+    <footer className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-10">
       <div className="flex flex-col items-center gap-5 border-t border-[var(--border)] pt-8 sm:flex-row sm:justify-between">
         <div className="flex items-center gap-4">
           {socials.map((s) => (

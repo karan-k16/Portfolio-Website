@@ -18,21 +18,21 @@ export default function Home() {
       <Nav />
       <CommandPalette />
 
-      <main id="top" className="mx-auto max-w-3xl px-6 pt-32 sm:pt-40">
+      <main id="top" className="relative z-10 mx-auto max-w-5xl px-6 pt-32 sm:pt-40">
         {/* Hero */}
-        <section className="mb-24">
-          <Reveal>
-            <h1 className="font-serif text-6xl font-semibold tracking-tight sm:text-7xl">
-              {profile.name}
-            </h1>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              {profile.bio}
-            </p>
-          </Reveal>
+        <section className="mb-24 sm:mb-28">
+          <div className="grid items-end gap-6 md:grid-cols-[1.1fr_1fr] md:gap-12">
+            <Reveal>
+              <h1 className="font-serif text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
+                {profile.name}
+              </h1>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="text-lg leading-relaxed text-muted">{profile.bio}</p>
+            </Reveal>
+          </div>
           <Reveal delay={220}>
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
               <a
                 href={profile.socials.github}
                 target="_blank"
@@ -58,18 +58,18 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="mb-24 scroll-mt-24">
+        <section
+          id="experience"
+          className="mb-20 grid scroll-mt-28 gap-5 md:grid-cols-[10rem_1fr] md:gap-12"
+        >
           <Reveal>
-            <h2 className="section-label mb-8">Experience</h2>
+            <h2 className="section-label md:sticky md:top-28">Experience</h2>
           </Reveal>
-          <div className="space-y-9">
+          <div className="space-y-10">
             {experiences.map((exp, i) => (
               <Reveal key={exp.role + exp.company} delay={i * 80}>
-                <div className="group grid gap-1 sm:grid-cols-[1fr] md:grid-cols-[8.5rem_1fr] md:gap-6">
-                  <div className="order-2 text-[13px] text-muted-2 md:order-1 md:pt-1">
-                    {exp.period}
-                  </div>
-                  <div className="order-1 md:order-2">
+                <div className="group">
+                  <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <div className="flex flex-wrap items-baseline gap-x-2">
                       <span className="font-medium text-foreground">
                         {exp.role}
@@ -89,11 +89,14 @@ export default function Home() {
                         <span className="text-accent">{exp.company}</span>
                       )}
                     </div>
-                    <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-muted">
-                      {exp.description}
-                    </p>
-                    <p className="mt-1 text-[13px] text-muted-2">{exp.location}</p>
+                    <div className="whitespace-nowrap text-[13px] text-muted-2 sm:pt-1">
+                      {exp.period}
+                    </div>
                   </div>
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
+                    {exp.description}
+                  </p>
+                  <p className="mt-1 text-[13px] text-muted-2">{exp.location}</p>
                 </div>
               </Reveal>
             ))}
@@ -101,18 +104,18 @@ export default function Home() {
         </section>
 
         {/* Education */}
-        <section id="education" className="mb-24 scroll-mt-24">
+        <section
+          id="education"
+          className="mb-20 grid scroll-mt-28 gap-5 md:grid-cols-[10rem_1fr] md:gap-12"
+        >
           <Reveal>
-            <h2 className="section-label mb-8">Education</h2>
+            <h2 className="section-label md:sticky md:top-28">Education</h2>
           </Reveal>
           <div className="space-y-6">
             {education.map((ed, i) => (
               <Reveal key={ed.degree} delay={i * 80}>
-                <div className="grid gap-1 md:grid-cols-[8.5rem_1fr] md:gap-6">
-                  <div className="order-2 text-[13px] text-muted-2 md:order-1 md:pt-1">
-                    {ed.period}
-                  </div>
-                  <div className="order-1 md:order-2">
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                  <div>
                     <div className="font-medium text-foreground">{ed.degree}</div>
                     {ed.schoolUrl ? (
                       <a
@@ -130,6 +133,9 @@ export default function Home() {
                       <span className="ml-2 text-xs text-muted-2">· {ed.note}</span>
                     )}
                   </div>
+                  <div className="whitespace-nowrap text-[13px] text-muted-2 sm:pt-1">
+                    {ed.period}
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -137,14 +143,17 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="mb-24 scroll-mt-24">
+        <section
+          id="projects"
+          className="mb-20 grid scroll-mt-28 gap-5 md:grid-cols-[10rem_1fr] md:gap-12"
+        >
           <Reveal>
-            <h2 className="section-label mb-8">Projects</h2>
+            <h2 className="section-label md:sticky md:top-28">Projects</h2>
           </Reveal>
-          <div className="space-y-8">
+          <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={i * 80}>
-                <div className="group">
+                <div className="group h-full">
                   <div className="flex flex-wrap items-center gap-2">
                     <h3 className="font-medium text-foreground">{p.name}</h3>
                     {p.featured && (
@@ -190,15 +199,18 @@ export default function Home() {
         </section>
 
         {/* Publications */}
-        <section id="publications" className="mb-24 scroll-mt-24">
+        <section
+          id="publications"
+          className="mb-20 grid scroll-mt-28 gap-5 md:grid-cols-[10rem_1fr] md:gap-12"
+        >
           <Reveal>
-            <h2 className="section-label mb-8">Publications</h2>
+            <h2 className="section-label md:sticky md:top-28">Publications</h2>
           </Reveal>
           <div className="space-y-8">
             {publications.map((pub, i) => (
               <Reveal key={pub.title} delay={i * 80}>
                 <div>
-                  <h3 className="max-w-xl font-medium leading-snug text-foreground">
+                  <h3 className="font-medium leading-snug text-foreground">
                     {pub.title}
                   </h3>
                   <div className="mt-1.5 flex flex-wrap items-center gap-2 text-sm">
@@ -213,7 +225,7 @@ export default function Home() {
                       {pub.status}
                     </span>
                   </div>
-                  <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-muted">
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
                     {pub.description}
                   </p>
                   <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-2">
@@ -236,11 +248,14 @@ export default function Home() {
         </section>
 
         {/* Skills */}
-        <section id="skills" className="mb-16 scroll-mt-24">
+        <section
+          id="skills"
+          className="mb-16 grid scroll-mt-28 gap-5 md:grid-cols-[10rem_1fr] md:gap-12"
+        >
           <Reveal>
-            <h2 className="section-label mb-8">Skills</h2>
+            <h2 className="section-label md:sticky md:top-28">Skills</h2>
           </Reveal>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
             {Object.entries(skills).map(([group, items], i) => (
               <Reveal key={group} delay={i * 60}>
                 <div>

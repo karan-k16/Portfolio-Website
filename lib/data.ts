@@ -3,7 +3,7 @@ export const profile = {
   monogram: "KK",
   location: "Toronto, Ontario",
   email: "karankardam16@gmail.com",
-  bio: "I am a Computer Engineering student at the University of Toronto, minoring in Artificial Intelligence and Engineering Business, interested in software engineering with a focus on machine learning and distributed systems.",
+  bio: "I am a Computer Engineering student at the University of Toronto, minoring in Artificial Intelligence and Engineering Business, interested in software engineering with a focus on machine learning and AI systems.",
   socials: {
     github: "https://github.com/karan-k16",
     linkedin: "https://www.linkedin.com/in/karan-kardam",
