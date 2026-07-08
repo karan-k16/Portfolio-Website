@@ -111,11 +111,6 @@ export const projects: Project[] = [
     tech: ["Python", "C++", "Bash", "ROS", "SMACH"],
     githubUrl: "https://github.com/karan-k16",
   },
-  {
-    name: "FIRST Robotics Competition",
-    description: "Competitive robotics — design, build, and control systems",
-    tech: ["Java", "Robotics"],
-  },
 ];
 
 export type Publication = {
