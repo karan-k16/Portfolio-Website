@@ -7,9 +7,9 @@
   --muted-2: #5c6875;
   --card: rgba(255, 255, 255, 0.02);
   --border: rgba(255, 255, 255, 0.08);
-  --accent: #22d3ee;
-  --accent-soft: #38bdf8;
-  --accent-glow: rgba(34, 211, 238, 0.15);
+  --accent: #38bdf8;
+  --accent-soft: #7dd3fc;
+  --accent-glow: rgba(56, 189, 248, 0.16);
   --dot: rgba(255, 255, 255, 0.05);
 }
 
@@ -20,9 +20,9 @@
   --muted-2: #8a94a3;
   --card: rgba(0, 0, 0, 0.015);
   --border: rgba(0, 0, 0, 0.09);
-  --accent: #0891b2;
-  --accent-soft: #0284c7;
-  --accent-glow: rgba(8, 145, 178, 0.12);
+  --accent: #0284c7;
+  --accent-soft: #0369a1;
+  --accent-glow: rgba(2, 132, 199, 0.12);
   --dot: rgba(0, 0, 0, 0.06);
 }
 
@@ -36,6 +36,7 @@
   --color-border-soft: var(--border);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-cursive: var(--font-dancing), "Segoe Script", cursive;
 }
 
 * {
@@ -92,7 +93,7 @@ body {
 .section-label {
   color: var(--muted-2);
   letter-spacing: 0.22em;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
 }

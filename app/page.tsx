@@ -22,17 +22,17 @@ export default function Home() {
         {/* Hero */}
         <section className="mb-24">
           <Reveal>
-            <h1 className="font-serif text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h1 className="font-serif text-6xl font-semibold tracking-tight sm:text-7xl">
               {profile.name}
             </h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
               {profile.bio}
             </p>
           </Reveal>
           <Reveal delay={220}>
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
               <a
                 href={profile.socials.github}
                 target="_blank"
@@ -66,7 +66,7 @@ export default function Home() {
             {experiences.map((exp, i) => (
               <Reveal key={exp.role + exp.company} delay={i * 80}>
                 <div className="group grid gap-1 sm:grid-cols-[1fr] md:grid-cols-[8.5rem_1fr] md:gap-6">
-                  <div className="order-2 text-xs text-muted-2 md:order-1 md:pt-1">
+                  <div className="order-2 text-[13px] text-muted-2 md:order-1 md:pt-1">
                     {exp.period}
                   </div>
                   <div className="order-1 md:order-2">
@@ -89,10 +89,10 @@ export default function Home() {
                         <span className="text-accent">{exp.company}</span>
                       )}
                     </div>
-                    <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-muted">
+                    <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-muted">
                       {exp.description}
                     </p>
-                    <p className="mt-1 text-xs text-muted-2">{exp.location}</p>
+                    <p className="mt-1 text-[13px] text-muted-2">{exp.location}</p>
                   </div>
                 </div>
               </Reveal>
@@ -109,7 +109,7 @@ export default function Home() {
             {education.map((ed, i) => (
               <Reveal key={ed.degree} delay={i * 80}>
                 <div className="grid gap-1 md:grid-cols-[8.5rem_1fr] md:gap-6">
-                  <div className="order-2 text-xs text-muted-2 md:order-1 md:pt-1">
+                  <div className="order-2 text-[13px] text-muted-2 md:order-1 md:pt-1">
                     {ed.period}
                   </div>
                   <div className="order-1 md:order-2">
@@ -164,10 +164,10 @@ export default function Home() {
                       )}
                     </span>
                   </div>
-                  <p className="mt-1 text-sm text-muted">{p.description}</p>
+                  <p className="mt-1 text-[15px] text-muted">{p.description}</p>
                   <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                     {p.tech.map((t) => (
-                      <span key={t} className="text-xs text-muted-2">
+                      <span key={t} className="text-[13px] text-muted-2">
                         {t}
                       </span>
                     ))}
@@ -202,7 +202,7 @@ export default function Home() {
                       {pub.status}
                     </span>
                   </div>
-                  <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-muted">
+                  <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-muted">
                     {pub.description}
                   </p>
                   <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-2">

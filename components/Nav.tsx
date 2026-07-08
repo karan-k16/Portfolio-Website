@@ -32,12 +32,12 @@ export default function Nav() {
         <a
           href="#top"
           aria-label="Go to top"
-          className="font-serif text-xl font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
+          className="font-cursive text-3xl leading-none text-foreground transition-colors hover:text-accent"
         >
           {profile.monogram}
         </a>
         <div className="flex items-center gap-1 sm:gap-3">
-          <ul className="hidden items-center gap-5 text-sm text-muted sm:flex">
+          <ul className="hidden items-center gap-5 text-[15px] text-muted sm:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <a

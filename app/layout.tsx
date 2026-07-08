@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Fraunces, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/lib/data";
 
@@ -12,6 +12,13 @@ const inter = Inter({
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
+  display: "swap",
+});
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-dancing",
   display: "swap",
 });
 
@@ -42,11 +49,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${fraunces.variable} ${dancing.variable}`}
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <div className="accent-bar" aria-hidden="true" />
         {children}
       </body>
