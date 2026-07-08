@@ -104,24 +104,23 @@ export default function Home() {
                       ) : (
                         <span className="text-accent">{exp.company}</span>
                       )}
-                      {exp.lab && (
-                        <>
-                          <span className="text-muted-2">·</span>
-                          {exp.labUrl ? (
-                            <a
-                              href={exp.labUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link-accent inline-flex items-center gap-1"
-                            >
-                              {exp.lab}
-                              <ExternalIcon className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
-                            </a>
-                          ) : (
-                            <span className="text-accent">{exp.lab}</span>
-                          )}
-                        </>
-                      )}
+                      {exp.lab &&
+                        (exp.labUrl ? (
+                          <a
+                            href={exp.labUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 self-center text-[13px] text-muted-2 transition-colors hover:text-accent"
+                          >
+                            <ExternalIcon className="h-3 w-3" />
+                            {exp.lab}
+                          </a>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 self-center text-[13px] text-muted-2">
+                            <ExternalIcon className="h-3 w-3" />
+                            {exp.lab}
+                          </span>
+                        ))}
                     </div>
                     <div className="whitespace-nowrap text-[14px] text-muted-2 sm:pt-1">
                       {exp.period}
