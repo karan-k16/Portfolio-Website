@@ -7,7 +7,8 @@ export const profile = {
   socials: {
     github: "https://github.com/karan-k16",
     linkedin: "https://www.linkedin.com/in/karan-kardam",
-    email: "mailto:karankardam16@gmail.com",
+    email:
+      "https://mail.google.com/mail/?view=cm&fs=1&to=karankardam16@gmail.com",
   },
   resumeUrl: "/resume.pdf",
 };

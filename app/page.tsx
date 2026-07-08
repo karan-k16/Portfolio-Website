@@ -2,7 +2,13 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import CommandPalette from "@/components/CommandPalette";
-import { ExternalIcon, StarIcon, GithubIcon } from "@/components/icons";
+import {
+  ExternalIcon,
+  StarIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+} from "@/components/icons";
 import {
   profile,
   experiences,
@@ -32,27 +38,37 @@ export default function Home() {
             </Reveal>
           </div>
           <Reveal delay={220}>
-            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
+            <div className="mt-8 flex flex-wrap items-center gap-5">
               <a
                 href={profile.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-accent inline-flex items-center gap-1"
+                aria-label="GitHub"
+                className="text-muted transition-colors hover:text-accent"
               >
-                GitHub <ExternalIcon className="h-3 w-3" />
+                <GithubIcon className="h-5 w-5" />
               </a>
               <a
                 href={profile.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-accent inline-flex items-center gap-1"
+                aria-label="LinkedIn"
+                className="text-muted transition-colors hover:text-accent"
               >
-                LinkedIn <ExternalIcon className="h-3 w-3" />
+                <LinkedinIcon className="h-5 w-5" />
               </a>
-              <a href={profile.socials.email} className="link-accent inline-flex items-center gap-1">
-                Email
+              <a
+                href={profile.socials.email}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+                className="text-muted transition-colors hover:text-accent"
+              >
+                <MailIcon className="h-5 w-5" />
               </a>
-              <span className="text-muted-2">{profile.location}</span>
+              <span className="ml-1 text-[15px] text-muted-2">
+                {profile.location}
+              </span>
             </div>
           </Reveal>
         </section>
