@@ -17,6 +17,8 @@ export type Experience = {
   company: string;
   companyUrl?: string;
   companyShort?: string;
+  lab?: string;
+  labUrl?: string;
   location: string;
   period: string;
   description: string;
@@ -38,6 +40,8 @@ export const experiences: Experience[] = [
     company: "University of Toronto",
     companyUrl: "https://www.utoronto.ca",
     companyShort: "UofT",
+    lab: "Mine Energy Lab",
+    labUrl: "https://mineenergy.civmin.utoronto.ca/team/",
     location: "Toronto, Ontario",
     period: "Jan 2026 – Apr 2026",
     description:
@@ -94,6 +98,7 @@ export const projects: Project[] = [
     description: "480p-to-2K super-resolution CNN pipeline with UTMIST",
     tech: ["Python", "PyTorch", "OpenCV", "CUDA"],
     githubUrl: "https://github.com/karan-k16",
+    liveUrl: "https://www.utmist.ca/",
     featured: true,
   },
   {
@@ -111,6 +116,7 @@ export const projects: Project[] = [
       "Rover autonomy with ROS SMACH state machines and real-time path planning & obstacle avoidance",
     tech: ["Python", "C++", "Bash", "ROS", "SMACH"],
     githubUrl: "https://github.com/karan-k16",
+    liveUrl: "https://rsx.skule.ca/",
   },
 ];
 

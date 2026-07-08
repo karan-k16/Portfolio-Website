@@ -126,7 +126,7 @@ body {
 .section-label {
   color: var(--muted-2);
   letter-spacing: 0.22em;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
 }

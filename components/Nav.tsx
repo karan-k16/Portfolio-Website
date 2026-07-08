@@ -37,7 +37,7 @@ export default function Nav() {
           {profile.monogram}
         </a>
         <div className="flex items-center gap-1 sm:gap-3">
-          <ul className="hidden items-center gap-5 text-[15px] text-muted sm:flex">
+          <ul className="hidden items-center gap-5 text-base text-muted sm:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <a

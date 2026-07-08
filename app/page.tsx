@@ -86,7 +86,7 @@ export default function Home() {
               <Reveal key={exp.role + exp.company} delay={i * 80}>
                 <div className="group">
                   <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                    <div className="flex flex-wrap items-baseline gap-x-2">
+                    <div className="flex flex-wrap items-baseline gap-x-2 text-[17px]">
                       <span className="font-medium text-foreground">
                         {exp.role}
                       </span>
@@ -104,15 +104,33 @@ export default function Home() {
                       ) : (
                         <span className="text-accent">{exp.company}</span>
                       )}
+                      {exp.lab && (
+                        <>
+                          <span className="text-muted-2">·</span>
+                          {exp.labUrl ? (
+                            <a
+                              href={exp.labUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link-accent inline-flex items-center gap-1"
+                            >
+                              {exp.lab}
+                              <ExternalIcon className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
+                            </a>
+                          ) : (
+                            <span className="text-accent">{exp.lab}</span>
+                          )}
+                        </>
+                      )}
                     </div>
-                    <div className="whitespace-nowrap text-[13px] text-muted-2 sm:pt-1">
+                    <div className="whitespace-nowrap text-[14px] text-muted-2 sm:pt-1">
                       {exp.period}
                     </div>
                   </div>
-                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
+                  <p className="mt-1.5 text-base leading-relaxed text-muted">
                     {exp.description}
                   </p>
-                  <p className="mt-1 text-[13px] text-muted-2">{exp.location}</p>
+                  <p className="mt-1 text-[14px] text-muted-2">{exp.location}</p>
                 </div>
               </Reveal>
             ))}
@@ -132,24 +150,28 @@ export default function Home() {
               <Reveal key={ed.degree} delay={i * 80}>
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                   <div>
-                    <div className="font-medium text-foreground">{ed.degree}</div>
+                    <div className="text-[17px] font-medium text-foreground">
+                      {ed.degree}
+                    </div>
                     {ed.schoolUrl ? (
                       <a
                         href={ed.schoolUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="link-accent text-sm"
+                        className="link-accent text-[15px]"
                       >
                         {ed.school}
                       </a>
                     ) : (
-                      <span className="text-sm text-accent">{ed.school}</span>
+                      <span className="text-[15px] text-accent">{ed.school}</span>
                     )}
                     {ed.note && (
-                      <span className="ml-2 text-xs text-muted-2">· {ed.note}</span>
+                      <span className="ml-2 text-[13px] text-muted-2">
+                        · {ed.note}
+                      </span>
                     )}
                   </div>
-                  <div className="whitespace-nowrap text-[13px] text-muted-2 sm:pt-1">
+                  <div className="whitespace-nowrap text-[14px] text-muted-2 sm:pt-1">
                     {ed.period}
                   </div>
                 </div>
@@ -166,44 +188,44 @@ export default function Home() {
           <Reveal>
             <h2 className="section-label md:sticky md:top-28">Projects</h2>
           </Reveal>
-          <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
+          <div className="space-y-8">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={i * 80}>
                 <div className="group h-full">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="font-medium text-foreground">{p.name}</h3>
+                  <div className="leading-snug">
+                    <h3 className="inline align-middle text-[17px] font-medium text-foreground">
+                      {p.name}
+                    </h3>
                     {p.featured && (
-                      <StarIcon className="h-3.5 w-3.5 text-accent" />
+                      <StarIcon className="ml-2 inline-block h-4 w-4 align-middle text-accent" />
                     )}
-                    <span className="flex items-center gap-2 text-muted-2">
-                      {p.githubUrl && (
-                        <a
-                          href={p.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${p.name} on GitHub`}
-                          className="transition-colors hover:text-accent"
-                        >
-                          <GithubIcon className="h-3.5 w-3.5" />
-                        </a>
-                      )}
-                      {p.liveUrl && (
-                        <a
-                          href={p.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${p.name} — live`}
-                          className="transition-colors hover:text-accent"
-                        >
-                          <ExternalIcon className="h-3.5 w-3.5" />
-                        </a>
-                      )}
-                    </span>
+                    {p.githubUrl && (
+                      <a
+                        href={p.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${p.name} on GitHub`}
+                        className="ml-2 inline-block align-middle text-muted-2 transition-colors hover:text-accent"
+                      >
+                        <GithubIcon className="h-4 w-4" />
+                      </a>
+                    )}
+                    {p.liveUrl && (
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${p.name} — live`}
+                        className="ml-1.5 inline-block align-middle text-muted-2 transition-colors hover:text-accent"
+                      >
+                        <ExternalIcon className="h-4 w-4" />
+                      </a>
+                    )}
                   </div>
-                  <p className="mt-1 text-[15px] text-muted">{p.description}</p>
+                  <p className="mt-1.5 text-base text-muted">{p.description}</p>
                   <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                     {p.tech.map((t) => (
-                      <span key={t} className="text-[13px] text-muted-2">
+                      <span key={t} className="text-[14px] text-muted-2">
                         {t}
                       </span>
                     ))}
@@ -226,13 +248,13 @@ export default function Home() {
             {publications.map((pub, i) => (
               <Reveal key={pub.title} delay={i * 80}>
                 <div>
-                  <h3 className="font-medium leading-snug text-foreground">
+                  <h3 className="text-[17px] font-medium leading-snug text-foreground">
                     {pub.title}
                   </h3>
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2 text-sm">
+                  <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[15px]">
                     <span className="text-muted">{pub.venue}</span>
                     <span
-                      className={`rounded-full border px-2 py-0.5 text-[11px] ${
+                      className={`rounded-full border px-2 py-0.5 text-[12px] ${
                         pub.statusType === "published"
                           ? "border-accent/40 text-accent"
                           : "border-[var(--border)] text-muted-2"
@@ -241,10 +263,10 @@ export default function Home() {
                       {pub.status}
                     </span>
                   </div>
-                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
+                  <p className="mt-1.5 text-base leading-relaxed text-muted">
                     {pub.description}
                   </p>
-                  <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-2">
+                  <div className="mt-1.5 flex items-center gap-3 text-[13px] text-muted-2">
                     <span>{pub.date}</span>
                     {pub.paperUrl && (
                       <a
@@ -275,14 +297,14 @@ export default function Home() {
             {Object.entries(skills).map(([group, items], i) => (
               <Reveal key={group} delay={i * 60}>
                 <div>
-                  <div className="mb-2 text-xs font-medium text-foreground">
+                  <div className="mb-2 text-[14px] font-medium text-foreground">
                     {group}
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {items.map((it) => (
                       <span
                         key={it}
-                        className="card rounded-full px-2.5 py-1 text-xs text-muted"
+                        className="card rounded-full px-2.5 py-1 text-[13px] text-muted"
                       >
                         {it}
                       </span>
