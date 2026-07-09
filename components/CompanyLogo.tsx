@@ -1,27 +1,38 @@
+import Image from "next/image";
+
 type Props = {
   company?: "microsoft" | "uoft" | "foresters";
 };
 
+const logos = {
+  microsoft: {
+    src: "/logos/microsoft.png",
+    alt: "Microsoft",
+  },
+  uoft: {
+    src: "/logos/uoft.png",
+    alt: "University of Toronto",
+  },
+  foresters: {
+    src: "/logos/foresters.png",
+    alt: "Foresters Financial",
+  },
+} as const;
+
 export default function CompanyLogo({ company }: Props) {
   if (!company) return null;
 
+  const logo = logos[company];
+
   return (
-    <span
-      aria-hidden="true"
-      className="card flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted-2 transition-colors duration-200 group-hover:border-accent/40 group-hover:text-foreground"
-    >
-      {company === "microsoft" ? (
-        <svg viewBox="0 0 23 23" className="h-[18px] w-[18px]" fill="currentColor">
-          <rect x="0" y="0" width="10.5" height="10.5" />
-          <rect x="12.5" y="0" width="10.5" height="10.5" />
-          <rect x="0" y="12.5" width="10.5" height="10.5" />
-          <rect x="12.5" y="12.5" width="10.5" height="10.5" />
-        </svg>
-      ) : (
-        <span className="text-[12px] font-semibold tracking-tight">
-          {company === "uoft" ? "UofT" : "FF"}
-        </span>
-      )}
-    </span>
+    <div className="flex h-14 w-14 shrink-0 items-center justify-center sm:h-[3.75rem] sm:w-[3.75rem]">
+      <Image
+        src={logo.src}
+        alt={logo.alt}
+        width={60}
+        height={60}
+        className="h-full w-full object-contain"
+      />
+    </div>
   );
 }

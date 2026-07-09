@@ -75,7 +75,7 @@ export const education: Education[] = [
   {
     degree: "B.A.Sc. Computer Engineering, Minors in AI & Engineering Business",
     school: "University of Toronto",
-    schoolUrl: "https://www.utoronto.ca",
+    schoolUrl: "https://www.engineering.utoronto.ca/about/",
     period: "Sep 2024 – May 2028",
   },
 ];

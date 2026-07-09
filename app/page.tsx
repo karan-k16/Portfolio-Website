@@ -82,12 +82,12 @@ export default function Home() {
           <Reveal>
             <h2 className="section-label md:sticky md:top-28">Experience</h2>
           </Reveal>
-          <div className="space-y-10">
+          <div className="space-y-12">
             {experiences.map((exp, i) => (
               <Reveal key={exp.role + exp.company} delay={i * 80}>
-                <div className="group flex gap-4">
+                <div className="group flex items-start gap-5 sm:gap-6">
                   <CompanyLogo company={exp.logo} />
-                  <div className="min-w-0 flex-1">
+                  <div className="min-w-0 flex-1 pt-0.5">
                   <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <div className="flex flex-wrap items-baseline gap-x-2 text-[17px]">
                       <span className="font-medium text-foreground">
