@@ -4,12 +4,13 @@ type Props = {
   company?: "microsoft" | "uoft" | "foresters";
 };
 
+const logoContainer =
+  "flex h-14 w-14 shrink-0 items-center justify-center sm:h-[3.75rem] sm:w-[3.75rem]";
+
 const logos = {
   microsoft: {
     src: "/logos/microsoft.png",
     alt: "Microsoft",
-    containerClass:
-      "flex h-14 w-14 shrink-0 items-center justify-center sm:h-[3.75rem] sm:w-[3.75rem]",
     imageClass: "h-full w-full object-contain",
     width: 60,
     height: 60,
@@ -17,18 +18,14 @@ const logos = {
   uoft: {
     src: "/logos/uoft.png",
     alt: "University of Toronto",
-    containerClass:
-      "flex h-14 w-[7.25rem] shrink-0 items-center justify-center sm:h-16 sm:w-[8.5rem]",
-    imageClass: "logo-uoft h-full w-full object-contain",
-    width: 136,
-    height: 56,
+    imageClass: "logo-uoft h-[82%] w-[92%] object-contain",
+    width: 60,
+    height: 60,
   },
   foresters: {
     src: "/logos/foresters.png",
     alt: "Foresters Financial",
-    containerClass:
-      "flex h-14 w-14 shrink-0 items-center justify-center sm:h-[3.75rem] sm:w-[3.75rem]",
-    imageClass: "h-full w-full object-contain",
+    imageClass: "h-full w-full rounded-md object-cover",
     width: 60,
     height: 60,
   },
@@ -40,7 +37,7 @@ export default function CompanyLogo({ company }: Props) {
   const logo = logos[company];
 
   return (
-    <div className={logo.containerClass}>
+    <div className={logoContainer}>
       <Image
         src={logo.src}
         alt={logo.alt}
