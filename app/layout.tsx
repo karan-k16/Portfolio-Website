@@ -24,7 +24,7 @@ const dancing = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — Computer Engineering @ UofT`,
+  title: profile.name,
   description: profile.bio,
   openGraph: {
     title: profile.name,
