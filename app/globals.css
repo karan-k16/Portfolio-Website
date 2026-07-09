@@ -165,14 +165,6 @@ body {
   background: var(--card);
 }
 
-.logo-uoft {
-  filter: brightness(0) invert(1);
-}
-
-:root.light .logo-uoft {
-  filter: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;

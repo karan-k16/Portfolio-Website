@@ -18,7 +18,7 @@ const logos = {
   uoft: {
     src: "/logos/uoft.png",
     alt: "University of Toronto",
-    imageClass: "logo-uoft h-[82%] w-[92%] object-contain",
+    imageClass: "h-full w-full object-contain",
     width: 60,
     height: 60,
   },
