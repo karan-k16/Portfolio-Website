@@ -17,6 +17,7 @@ export type Experience = {
   company: string;
   companyUrl?: string;
   companyShort?: string;
+  logo?: "microsoft" | "uoft" | "foresters";
   lab?: string;
   labUrl?: string;
   location: string;
@@ -30,6 +31,7 @@ export const experiences: Experience[] = [
     company: "Microsoft",
     companyUrl: "https://www.microsoft.com",
     companyShort: "Microsoft",
+    logo: "microsoft",
     location: "Redmond, Washington",
     period: "May 2026 – Aug 2026",
     description:
@@ -40,6 +42,7 @@ export const experiences: Experience[] = [
     company: "University of Toronto",
     companyUrl: "https://www.utoronto.ca",
     companyShort: "UofT",
+    logo: "uoft",
     lab: "Mine Energy Lab",
     labUrl: "https://mineenergy.civmin.utoronto.ca/team/",
     location: "Toronto, Ontario",
@@ -52,6 +55,7 @@ export const experiences: Experience[] = [
     company: "Foresters Financial",
     companyUrl: "https://www.foresters.com",
     companyShort: "Foresters",
+    logo: "foresters",
     location: "Toronto, Ontario",
     period: "May 2025 – Aug 2025",
     description:

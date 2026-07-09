@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import CommandPalette from "@/components/CommandPalette";
+import CompanyLogo from "@/components/CompanyLogo";
 import {
   ExternalIcon,
   StarIcon,
@@ -84,7 +85,9 @@ export default function Home() {
           <div className="space-y-10">
             {experiences.map((exp, i) => (
               <Reveal key={exp.role + exp.company} delay={i * 80}>
-                <div className="group">
+                <div className="group flex gap-4">
+                  <CompanyLogo company={exp.logo} />
+                  <div className="min-w-0 flex-1">
                   <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <div className="flex flex-wrap items-baseline gap-x-2 text-[17px]">
                       <span className="font-medium text-foreground">
@@ -130,6 +133,7 @@ export default function Home() {
                     {exp.description}
                   </p>
                   <p className="mt-1 text-[14px] text-muted-2">{exp.location}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
