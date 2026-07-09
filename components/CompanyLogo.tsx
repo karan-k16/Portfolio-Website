@@ -31,7 +31,7 @@ export default function CompanyLogo({ company }: Props) {
         alt={logo.alt}
         width={60}
         height={60}
-        className="h-full w-full object-contain"
+        className={`h-full w-full object-contain ${company === "uoft" ? "logo-uoft" : ""}`}
       />
     </div>
   );
