@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     location: "Redmond, Washington",
     period: "May 2026 – Aug 2026",
     description:
-      "Architected an agentic RAG assistant on the Microsoft Agent Framework with MCP tool-use, served to 100+ daily users on Copilot CLI. Built a hybrid BM25/vector retrieval layer on Azure AI Search with Redis caching, and shipped a multi-agent library with OAuth2/MSAL, CI/CD, and OpenTelemetry.",
+      "Architected an agentic RAG assistant on the Microsoft Agent Framework with MCP tool-use, served to 100+ daily users on Copilot CLI. Built a hybrid BM25/vector retrieval layer on Azure AI Search, and shipped a multi-agent library with OAuth2/MSAL and CI/CD.",
   },
   {
     role: "Machine Learning Researcher",
