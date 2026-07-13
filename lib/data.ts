@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     location: "Redmond, Washington",
     period: "May 2026 – Aug 2026",
     description:
-      "Building Perception Brain, an agentic RAG assistant on the Microsoft Agent Framework and MCP that answers ownership and onboarding questions with cited sources, served to 100+ daily users through the GitHub Copilot CLI.",
+      "Architected an agentic RAG assistant on the Microsoft Agent Framework with MCP tool-use, served to 100+ daily users on Copilot CLI. Built a hybrid BM25/vector retrieval layer on Azure AI Search with Redis caching, and shipped a multi-agent library with OAuth2/MSAL, CI/CD, and OpenTelemetry.",
   },
   {
     role: "Machine Learning Researcher",
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     location: "Toronto, Ontario",
     period: "Jan 2026 – Apr 2026",
     description:
-      "Built a two-stage multi-objective optimization framework (Differential Evolution + NSGA-II) for energy systems, and deployed Dockerized PyTorch surrogate models behind a FastAPI service with batched inference at 1.1s p95 latency.",
+      "Built a two-stage multi-objective optimization framework (Differential Evolution + NSGA-II) for energy systems, deployed Dockerized PyTorch surrogate models via FastAPI, and engineered Bayesian optimization with BoTorch/GPyTorch and MLflow tracking to cut convergence time 33%.",
   },
   {
     role: "Software Engineer Intern",
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
     location: "Toronto, Ontario",
     period: "May 2025 – Aug 2025",
     description:
-      "Modernized a legacy COBOL tax processing system into a scalable C# .NET Core microservice architecture on Docker, Azure Kubernetes Service, and Azure SQL, with a React + Vite + TypeScript frontend and Azure DevOps CI/CD pipelines.",
+      "Modernized a legacy COBOL tax processing system into C# .NET Core microservices on Docker, AKS, and Azure SQL, cutting deployment time 70%. Built a React + Vite + TypeScript frontend on ASP.NET Core APIs and Azure DevOps CI/CD.",
   },
 ];
 
@@ -92,17 +92,35 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "SoundCanvas",
-    description: "AI-powered image-to-music generation system",
-    tech: ["C++", "Python", "TensorFlow", "Node.js", "AWS", "MySQL"],
-    githubUrl: "https://github.com/karan-k16",
+    description:
+      "Image-to-music system generating genre-conditioned tracks with a 91% top-1 TensorFlow model, GraphQL orchestration on AWS ECS, and Terraform IaC",
+    tech: [
+      "C++",
+      "Python",
+      "AWS",
+      "Terraform",
+      "TensorFlow",
+      "Node.js",
+      "MySQL",
+    ],
+    githubUrl: "https://github.com/DakshK26/SoundCanvas",
+    liveUrl: "https://sound-canvas-seven.vercel.app/",
     featured: true,
   },
   {
     name: "Image Super-Resolution Pipeline",
-    description: "480p-to-2K super-resolution CNN pipeline with UTMIST",
-    tech: ["Python", "PyTorch", "OpenCV", "CUDA"],
+    description:
+      "CUDA-optimized PyTorch CNN with ONNX/TensorRT export and a Rust inference API, delivering +3.1 dB PSNR and +0.05 SSIM vs. bicubic",
+    tech: [
+      "Rust",
+      "PyTorch",
+      "CUDA",
+      "ONNX",
+      "TensorRT",
+      "PostgreSQL",
+    ],
     githubUrl: "https://github.com/karan-k16",
-    liveUrl: "https://www.utmist.ca/",
+    liveUrl: "https://utmist-sr-image-enhancement.vercel.app/",
     featured: true,
   },
   {
@@ -150,24 +168,50 @@ export const publications: Publication[] = [
 export const skills = {
   Languages: [
     "Python",
-    "Java",
     "C/C++",
     "C#",
-    "Swift",
-    "JavaScript",
+    "Rust",
+    "Java",
+    "Go",
     "TypeScript",
+    "JavaScript",
     "SQL",
+    "HTML/CSS",
   ],
-  Frameworks: ["ASP.NET Core", "Node.js", "React", "Flask", "ROS", "FastAPI"],
-  Libraries: ["PyTorch", "TensorFlow", "OpenCV", "NumPy", "SciPy", "GraphQL"],
+  Frameworks: [
+    "FastAPI",
+    "gRPC",
+    "GraphQL",
+    "Microsoft Graph",
+    "ASP.NET Core",
+    "Entity Framework",
+    "Node.js",
+    "React",
+  ],
+  Libraries: [
+    "PyTorch",
+    "TensorFlow",
+    "CUDA",
+    "TensorRT",
+    "ONNX",
+    "RAGAS",
+    "BoTorch/GPyTorch",
+    "NumPy",
+    "SciPy",
+    "CuPy",
+    "Ray",
+  ],
   Tools: [
     "AWS",
     "Azure",
-    "Terraform",
-    "Docker",
     "Kubernetes",
-    "SQL Server",
+    "Docker",
+    "Terraform",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "OpenTelemetry",
+    "MLflow",
     "Git",
-    "Linux",
   ],
 };
