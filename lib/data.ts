@@ -126,7 +126,7 @@ export const projects: Project[] = [
   {
     name: "Smart Plant Monitoring & Watering System",
     description:
-      "Automated plant care that tracks height with computer vision, watches moisture and environment sensors, and sends live alerts when plants need water — built for a weekend hackathon with a full React dashboard.",
+      "Automated plant care that tracks height with computer vision, watches moisture and environment sensors, and sends live alerts when plants need water. Built for a weekend hackathon with a full React dashboard.",
     tech: ["Python", "Flask", "OpenCV", "React", "Arduino"],
     githubUrl:
       "https://github.com/karan-k16/MakeUofT-Smart-Plant-Monitoring-System",

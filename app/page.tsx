@@ -218,7 +218,7 @@ export default function Home() {
                         href={p.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`${p.name} — live`}
+                        aria-label={`${p.name} live`}
                         className="ml-1.5 inline-block align-middle text-muted-2 transition-colors hover:text-accent"
                       >
                         <ExternalIcon className="h-4 w-4" />
