@@ -67,9 +67,6 @@ export default function Home() {
               >
                 <MailIcon className="h-5 w-5" />
               </a>
-              <span className="ml-1 text-[15px] text-muted-2">
-                {profile.location}
-              </span>
             </div>
           </Reveal>
         </section>
