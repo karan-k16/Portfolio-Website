@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     location: "Redmond, Washington",
     period: "May 2026 – Aug 2026",
     description:
-      "Architected an agentic RAG assistant that answers ownership, onboarding, and status questions with cited sources for 100+ daily Copilot CLI users. Built a knowledge graph from 1,000+ docs that lifted answer accuracy 33%, and a hybrid retrieval stack that cut latency nearly in half while raising recall 27% over a keyword baseline.",
+      "Architected an agentic RAG assistant that answers ownership, onboarding, and status questions with cited sources for engineering teams on Copilot CLI. Built the knowledge graph and hybrid retrieval stack behind it, and shipped a multi-agent library other teams can plug into their own workflows.",
   },
   {
     role: "Machine Learning Researcher",
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
     location: "Toronto, Ontario",
     period: "May 2025 – Aug 2025",
     description:
-      "Owned the full solo rewrite of a legacy COBOL tax processing system into cloud microservices, cutting deployment time 70% and making tax record updates far safer to ship. Built the React frontend on the new APIs that cut load time 40%, plus CI/CD pipelines that sped releases up another 60%.",
+      "Led the modernization of a legacy COBOL tax processing system into cloud microservices, replacing brittle batch jobs with modular services that were safer to ship and easier to maintain. Built the React frontend and CI/CD pipelines that took the new platform from rewrite to production.",
   },
 ];
 
