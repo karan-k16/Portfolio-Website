@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     location: "Redmond, Washington",
     period: "May 2026 – Aug 2026",
     description:
-      "Architected an agentic RAG assistant on the Microsoft Agent Framework with MCP tool-use, served to 100+ daily users on Copilot CLI. Built a hybrid BM25/vector retrieval layer on Azure AI Search, and shipped a multi-agent library with OAuth2/MSAL and CI/CD.",
+      "Building an agentic RAG assistant that answers ownership, onboarding, and status questions with cited sources for 100+ daily Copilot CLI users. Also built a hybrid retrieval layer that blends keyword and vector search, and a multi-agent library teams can plug into their own workflows.",
   },
   {
     role: "Machine Learning Researcher",
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     location: "Toronto, Ontario",
     period: "Jan 2026 – Apr 2026",
     description:
-      "Built a two-stage multi-objective optimization framework (Differential Evolution + NSGA-II) for energy systems, deployed Dockerized PyTorch surrogate models via FastAPI, and engineered Bayesian optimization with BoTorch/GPyTorch and MLflow tracking to cut convergence time 33%.",
+      "Researching multi-objective optimization and Bayesian methods for energy systems, helping engineers explore complex renewable energy configurations faster. Built surrogate models and warm-start strategies that cut convergence time by about a third while keeping solution quality high.",
   },
   {
     role: "Software Engineer Intern",
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
     location: "Toronto, Ontario",
     period: "May 2025 – Aug 2025",
     description:
-      "Modernized a legacy COBOL tax processing system into C# .NET Core microservices on Docker, AKS, and Azure SQL, cutting deployment time 70%. Built a React + Vite + TypeScript frontend on ASP.NET Core APIs and Azure DevOps CI/CD.",
+      "Modernizing a legacy tax processing system into cloud microservices, making updates safer and cutting deployment time substantially. Also built a React frontend on top of the new APIs so internal teams could work with tax records more quickly day to day.",
   },
 ];
 
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     name: "SoundCanvas",
     description:
-      "Image-to-music system generating genre-conditioned tracks with a 91% top-1 TensorFlow model, GraphQL orchestration on AWS ECS, and Terraform IaC",
+      "Turns images into genre-conditioned music tracks by reading visual features, predicting musical parameters, and composing full instrumental pieces. The model picks the right genre 91% of the time, with cloud services handling composition, mixing, and delivery end to end.",
     tech: [
       "C++",
       "Python",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
   {
     name: "Image Super-Resolution Pipeline",
     description:
-      "CUDA-optimized PyTorch CNN with ONNX/TensorRT export and a Rust inference API, delivering +3.1 dB PSNR and +0.05 SSIM vs. bicubic",
+      "Upscales images with a CUDA-optimized CNN served through a Rust API, with models exported for fast GPU inference. Beats bicubic baselines on both PSNR and SSIM while keeping VRAM use manageable on mid-range GPUs.",
     tech: [
       "Rust",
       "PyTorch",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
   {
     name: "Smart Plant Monitoring & Watering System",
     description:
-      "Automated plant care with computer-vision height tracking at 95%+ accuracy and live sensor alerts",
+      "Automated plant care that tracks height with computer vision, watches moisture and environment sensors, and sends live alerts when plants need water — built for a weekend hackathon with a full React dashboard.",
     tech: ["Python", "Flask", "OpenCV", "React", "Arduino"],
     githubUrl:
       "https://github.com/karan-k16/MakeUofT-Smart-Plant-Monitoring-System",
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     name: "Robotics for Space Exploration (RSX)",
     description:
-      "Rover autonomy with ROS SMACH state machines and real-time path planning & obstacle avoidance",
+      "Rover autonomy for a student space robotics team, using state machines for mission control alongside real-time path planning and obstacle avoidance so the rover can navigate rough terrain on its own.",
     tech: ["Python", "C++", "Bash", "ROS", "SMACH"],
     githubUrl: "https://github.com/karan-k16",
     liveUrl: "https://rsx.skule.ca/",
