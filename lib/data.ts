@@ -44,7 +44,7 @@ export const experiences: Experience[] = [
     companyShort: "UofT",
     logo: "uoft",
     lab: "Mine Energy Lab",
-    labUrl: "https://mineenergy.civmin.utoronto.ca/team/",
+    labUrl: "https://mineenergy.civmin.utoronto.ca/",
     location: "Toronto, Ontario",
     period: "Jan 2026 – Apr 2026",
     description:
